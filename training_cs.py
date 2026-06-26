@@ -6,9 +6,7 @@ import os
 import re
 from datetime import datetime
 
-# ==========================================
-# БАЗА ДАННЫХ И ХРАНИЛИЩЕ
-# ==========================================
+
 session_results = []
 is_tracking = False  # Флаг для управления фоновым потоком
 
