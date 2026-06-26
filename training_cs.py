@@ -160,9 +160,7 @@ def tail_log_file(file_path, log_callback):
         log_callback(f"Ошибка чтения файла: {e}")
 
 
-# ==========================================
-# ГРАФИЧЕСКИЙ ИНТЕРФЕЙС (CustomTkinter)
-# ==========================================
+
 ctk.set_appearance_mode("Dark")
 ctk.set_default_color_theme("blue")
 
