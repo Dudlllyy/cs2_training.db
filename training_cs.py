@@ -8,7 +8,7 @@ from datetime import datetime
 
 
 session_results = []
-is_tracking = False  # Флаг для управления фоновым потоком
+is_tracking = False
 
 
 def init_db():
