@@ -66,9 +66,7 @@ def save_and_get_previous(good, normal, bad):
     return last_session
 
 
-# ==========================================
-# ЛОГИКА ПАРСЕРА
-# ==========================================
+
 def time_to_seconds(time_str):
     if not time_str: return 0
     m, s = time_str.split(':')
