@@ -175,16 +175,16 @@ class CS2TrackerApp(ctk.CTk):
 
         init_db()
 
-        # Поле ввода пути к логу (по умолчанию твой путь)
+
         self.path_entry = ctk.CTkEntry(self, width=500, placeholder_text="Путь к console.log")
         self.path_entry.insert(0, r"S:\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\console.log")
         self.path_entry.grid(row=0, column=0, padx=20, pady=(20, 10), sticky="ew")
 
-        # Текстовое окно для вывода логов
+
         self.log_box = ctk.CTkTextbox(self, state="disabled", font=("Consolas", 13))
         self.log_box.grid(row=1, column=0, padx=20, pady=10, sticky="nsew")
 
-        # Фрейм для кнопок управления
+
         self.btn_frame = ctk.CTkFrame(self, fg_color="transparent")
         self.btn_frame.grid(row=2, column=0, padx=20, pady=(10, 20), sticky="ew")
         self.btn_frame.grid_columnconfigure((0, 1), weight=1)
@@ -201,12 +201,12 @@ class CS2TrackerApp(ctk.CTk):
         """Безопасный вывод текста в виджет из любого потока"""
         self.log_box.configure(state="normal")
         self.log_box.insert("end", text + "\n")
-        self.log_box.see("end")  # Автоскролл вниз
+        self.log_box.see("end")
         self.log_box.configure(state="disabled")
 
     def start_tracking(self):
         global is_tracking, session_results
-        session_results = []  # Очищаем результаты прошлой сессии
+        session_results = []
         is_tracking = True
 
         self.start_btn.configure(state="disabled")
@@ -224,7 +224,7 @@ class CS2TrackerApp(ctk.CTk):
 
     def stop_and_summarize(self):
         global is_tracking, session_results
-        is_tracking = False  # Останавливаем фоновый цикл
+        is_tracking = False
 
         self.start_btn.configure(state="normal")
         self.stop_btn.configure(state="disabled")
